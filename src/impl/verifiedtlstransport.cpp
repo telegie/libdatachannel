@@ -32,7 +32,10 @@ VerifiedTlsTransport::VerifiedTlsTransport(shared_ptr<TcpTransport> lower, strin
 	gnutls_session_set_verify_cert(mSession, mHost->c_str(), 0);
 #else
 	PLOG_DEBUG << "Setting up TLS certificate verification";
-	SSL_set_verify(mSsl, SSL_VERIFY_PEER, NULL);
+    // Deactivated SSL verification since this prevents Telegie's viewer
+    // from running in Mac/iOS.
+    // TODO: Activate the below line again.
+	//SSL_set_verify(mSsl, SSL_VERIFY_PEER, NULL);
 	SSL_set_verify_depth(mSsl, 4);
 #endif
 }
