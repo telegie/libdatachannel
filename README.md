@@ -1,3 +1,5 @@
+Archieved: was used for the real-time communication version of telegie-app, which is no longer in use.
+
 # libdatachannel - C/C++ WebRTC network library
 
 [![Build with OpenSSL](https://github.com/paullouisageneau/libdatachannel/actions/workflows/build-openssl.yml/badge.svg)](https://github.com/paullouisageneau/libdatachannel/actions/workflows/build-openssl.yml)
